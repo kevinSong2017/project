@@ -1,4 +1,4 @@
-package util;
+package util.proxy;
 
 import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;
@@ -6,7 +6,21 @@ import net.sf.cglib.proxy.MethodProxy;
 
 import java.lang.reflect.Method;
 
+/**
+ * 方法级别的代理
+ */
 public class CGLibDynamicProxy implements MethodInterceptor {
+
+    private static CGLibDynamicProxy cgLibDynamicProxy= new CGLibDynamicProxy();
+
+    public CGLibDynamicProxy() {
+    }
+
+    public static  CGLibDynamicProxy getInstance(){
+        return  cgLibDynamicProxy;
+    }
+
+
 
     public <T> T getProxy(Class clz){
         return (T)Enhancer.create(clz,this);

@@ -1,4 +1,4 @@
-package util;
+package util.proxy;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -8,6 +8,7 @@ import java.lang.reflect.Proxy;
  * JDK动态代理
  */
 public class JdkDynamicProxy implements InvocationHandler {
+
 
     private Object target;
 

@@ -1,8 +1,8 @@
-package test;
+package test.aop;
 
 import controller.proxy.Hello;
 import controller.proxy.proxyimpl.HelloImpl;
-import util.JdkDynamicProxy;
+import util.proxy.JdkDynamicProxy;
 
 /**
  * 测试JDK的动态代理
